@@ -1,0 +1,192 @@
+<!-- Run the code below in the integrated Terminal to edit Tailwind CSS classes -->
+<!-- npx tailwindcss -i tw_input.css -o tw_output.css --watch -->
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+    <title>Clock, Stopwatch, & Countdown Timer</title>
+    <meta charset="UTF-8">
+    <meta name="language" content="EN">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"
+        content="javascript clock and stopwatch and countdown timer, responsive clock and stopwatch and countdown timer design">
+    <meta name="description"
+        content="This is a SPW created with HTML, CSS, Tailwind CSS, Swiper.Js, and JavaScript with cubic effects to display clock">
+    <meta name="author" content="Shayan Zamani">
+    <meta name="theme-color" content="#f1f5f9" />
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="tw_output.css">
+</head>
+
+<body
+    class="w-screen h-screen p-5 flex justify-center items-start bg-slate-100 relative lg:items-center">
+    <!-- Mobile landscape alert -->
+    <div id="landscapeAlert"
+        class="w-full h-full bg-slate-50 text-[#018DED] text-3xl font-extrabold hidden justify-center items-center absolute inset-0 z-50">
+        <p class="-mt-24">Please rotate the screen</p>
+    </div>
+
+    <main class="lg:mb-36">
+        <!-- Slider main container -->
+        <section class="swiper w-[350px] h-[380px] mt-10">
+            <!-- Pagination -->
+            <div
+                class="swiper-pagination absolute top-[-44px] flex justify-center items-center max-h-min">
+            </div>
+
+            <!-- Slider wrapper -->
+            <div class="swiper-wrapper p-0">
+                <!-- Slides -->
+                <!-- Clock -->
+                <section
+                    class="swiper-slide bg-[#018DED] rounded-b-3xl text-white flex flex-col justify-around items-center text-center font-medium text-xl">
+                    <!-- Real clock -->
+                    <div
+                        class="real-clock w-52 h-52 border-8 border-white rounded-full relative p-5">
+                        <div class="relative w-full h-full translate-y-[-3px]">
+                            <div id="hourHand"
+                                class="real-clock-hand w-[55px] ml-5 h-2 bg-slate-900 absolute top-1/2 rotate-90 origin-[100%] duration-300 rounded">
+                            </div>
+                            <div id="minHand"
+                                class="real-clock-hand w-[75px] mr-8 h-[6px] bg-slate-900 absolute top-1/2 rotate-90 origin-[100%] duration-300 rounded">
+                            </div>
+                            <div id="secHand"
+                                class="real-clock-hand w-1/2 h-[4px] bg-slate-900 absolute top-1/2 rotate-90 origin-[100%] duration-300 rounded">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Today's date and time -->
+                    <div class="-mt-10">
+                        <!-- Time -->
+                        <p class="text-2xl font-bold mb-2">
+                            <!-- Time of the day -->
+                            <span id="timeOfDay">
+                                Today's Full Time
+                            </span>
+
+                            <!-- PM/AM sign -->
+                            <span id="middayState" class="uppercase ml-2">
+                                Today's Session
+                            </span>
+                        </p>
+
+                        <!-- Date -->
+                        <p id="todaysFullDate">
+                            Today's Full Date
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Stopwatch -->
+                <section
+                    class="swiper-slide bg-yellow-400 rounded-b-3xl text-white flex flex-col justify-around items-center text-center">
+                    <!-- Stopwatch icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="h-[130px] -mb-5 fill-white"
+                        viewBox="0 0 448 512">
+                        <path
+                            d="M432 304c0 114.9-93.1 208-208 208S16 418.9 16 304c0-104 76.3-190.2 176-205.5V64h-28c-6.6 0-12-5.4-12-12V12c0-6.6 5.4-12 12-12h120c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-28v34.5c37.5 5.8 71.7 21.6 99.7 44.6l27.5-27.5c4.7-4.7 12.3-4.7 17 0l28.3 28.3c4.7 4.7 4.7 12.3 0 17l-29.4 29.4-.6.6C419.7 223.3 432 262.2 432 304zm-176 36V188.5c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12V340c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12z" />
+                    </svg>
+
+                    <div>
+                        <div
+                            class="w-72 flex justify-around items-center text-xl">
+                            <span class="pl-3 lg:pl-6">m</span>
+                            <span class="pl-2">s</span>
+                            <span class="pr-2 lg:pr-5">ms</span>
+                        </div>
+
+                        <div class="w-72 text-[40px] font-bold"
+                            id="stopwatchTime">
+                            Stopwatch Timer
+                        </div>
+                    </div>
+
+                    <div
+                        class="w-72 -mt-10 flex justify-around items-center text-xl">
+                        <button type="button" id="stopwatchResetBtn"
+                            class="px-7 py-1.5 rounded-lg bg-red-500 font-semibold duration-150 lg:px-8 lg:py-2 lg:hover:bg-red-600 hidden">
+                            Reset
+                        </button>
+                        <button type="button" id="stopwatchMainBtn"
+                            class="px-7 py-1.5 rounded-lg bg-blue-500 font-semibold duration-150 lg:px-8 lg:py-2 lg:hover:bg-blue-600">
+                            Start
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Countdown -->
+                <section
+                    class="swiper-slide bg-green-500 rounded-b-3xl text-white flex flex-col justify-around items-center text-center">
+                    <!-- Countdown icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="h-[100px] mt-5 fill-white" viewBox="0 0 512 512">
+                        <path
+                            d="M256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C201.7 512 151.2 495 109.7 466.1C95.2 455.1 91.64 436 101.8 421.5C111.9 407 131.8 403.5 146.3 413.6C177.4 435.3 215.2 448 256 448C362 448 448 362 448 256C448 149.1 362 64 256 64C202.1 64 155 85.46 120.2 120.2L151 151C166.1 166.1 155.4 192 134.1 192H24C10.75 192 0 181.3 0 168V57.94C0 36.56 25.85 25.85 40.97 40.97L74.98 74.98C121.3 28.69 185.3 0 255.1 0L256 0zM256 128C269.3 128 280 138.7 280 152V246.1L344.1 311C354.3 320.4 354.3 335.6 344.1 344.1C335.6 354.3 320.4 354.3 311 344.1L239 272.1C234.5 268.5 232 262.4 232 256V152C232 138.7 242.7 128 256 128V128z" />
+                    </svg>
+
+                    <div
+                        class="flex flex-col justify-center items-center space-y-4 mt-5">
+                        <input type="number" name="countdownMinuts"
+                            placeholder="Minuts" min="1" max="60"
+                            id="countdownInput"
+                            class="text-slate-900 px-2 py-1.5 w-36 text-center rounded focus-within:outline-blue-500 focus-within:outline-4 placeholder:text-lg lg:py-2 lg:w-44 lg:placeholder:text-xl lg:text-xl">
+
+                        <div
+                            class="w-72 -mt-10 flex justify-evenly items-center text-xl">
+                            <button type="button" id="countdownResetBtn"
+                                class="px-7 py-1.5 rounded-lg bg-red-500 font-semibold duration-150 lg:px-8 lg:py-2 lg:hover:bg-red-600 hidden">
+                                Reset
+                            </button>
+                            <button type="button" id="countdownMainBtn"
+                                class="px-7 py-1.5 rounded-lg bg-blue-500 font-semibold duration-150 lg:px-8 lg:py-2 lg:hover:bg-blue-600">
+                                Start
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="my-3">
+                        <div
+                            class="w-40 flex justify-around items-center text-xl">
+                            <span>m</span>
+                            <span class="mr-2">s</span>
+                        </div>
+
+                        <div class="w-40 text-[40px] font-bold"
+                            id="countdownTime">
+                            Countdown Time
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <!-- Credits -->
+    <small
+        class="text-base text-center absolute bottom-20 flex flex-col justify-center mt-3 pb-3 lg:text-lg lg:bottom-10">
+        <p>
+            © Copyright
+            <span id="yearOfDate" class="mx-0.5 lg:mx-1.5">This Year</span>
+            | Created by
+        </p>
+        <a href="https://shayan-zamani.me" target="_blank"
+            rel="noopener noreferrer"
+            class="underline ml-2 text-lg font-semibold text-blue-600 lg:hover:text-blue-700 visited:text-purple-800 duration-150 lg:text-xl">
+            Shayan Zamani
+        </a>
+    </small>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script defer src="scripts.js"></script>
+</body>
+
+</html>

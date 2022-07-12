@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* General */
+* {
+    font-family: 'Rubik', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Remove up/down buttons from number inputs */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* Swiper.js */
+.swiper-pagination-bullet {
+    width: 117px;
+    height: 45px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    border-radius: 0;
+    margin: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    font-weight: 800;
+    font-size: 120%;
+    transition: all 0.1s;
+}
+
+@media screen and (min-width: 1024px) {
+    .swiper-pagination-bullet:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+.swiper-pagination-bullet:nth-of-type(1) {
+    border-top-left-radius: 24px;
+    left: -4px;
+}
+
+.swiper-pagination-bullet:nth-of-type(2) {
+    left: 113px;
+}
+
+.swiper-pagination-bullet:nth-of-type(3) {
+    border-top-right-radius: 24px;
+    right: -4.5px;
+    font-size: 110%;
+}
+
+.swiper-pagination-bullet-active[class*="pagination-clock-bg"] {
+    background-color: #018DED;
+}
+
+.swiper-pagination-bullet-active[class*="pagination-stopwatch-bg"] {
+    background-color: #facc15;
+}
+
+.swiper-pagination-bullet-active[class*="pagination-countdown-bg"] {
+    background-color: #22c55e;
+}
+
+/* Real-clock */
+.real-clock {
+    box-shadow:
+        0 0 0 4px rgba(0, 0, 0, 0.1),
+        inset 0 0 0 3px #EFEFEF,
+        inset 0 0 10px black,
+        0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.real-clock-hand {
+    transition-timing-function: cubic-bezier(0.1, 2.0, 0.58, 1);
+}
