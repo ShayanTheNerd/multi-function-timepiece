@@ -114,7 +114,7 @@ More projects like this: https://github.com/ShayanTheNerd?tab=repositories <br /
 
 ## Author
 
-<a href="https://shayan-zamani.me" target="_blank">Shayan Zamani</a>
+<a href="https://shayan-zamani.me">Shayan Zamani</a>
 
 ## License
 
