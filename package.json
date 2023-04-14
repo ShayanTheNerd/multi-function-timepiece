@@ -4,26 +4,26 @@
 	"readme": "https://github.com/ShayanTheNerd/multi-function-timepiece#readme",
 	"author": {
 		"name": "Shayan Zamani",
-		"email": "sh.zamani384@gmail.com",
-		"url": "https://shayan-zamani.me/"
+		"url": "https://shayan-zamani.me/",
+		"email": "sh.zamani384@gmail.com"
 	},
 	"keywords": [
+      "stopwatch",
 		"html css js",
 		"analog clock",
-		"stopwatch",
 		"countdown timer",
 		"multi-function timepiece",
 		"tailwindcss CLI template"
 	],
-	"description": "A multi-functional timepiece with cubic effects!",
+	"description": "A multi-functional timepiece with cubic slider effects!",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/ShayanTheNerd/multi-function-timepiece",
-		"directory": "main"
+		"directory": "main",
+		"url": "https://github.com/ShayanTheNerd/multi-function-timepiece"
 	},
 	"bugs": {
-		"url": "https://github.com/ShayanTheNerd/multi-function-timepiece/issues",
-		"email": "sh.zamani384@gmail.com"
+		"email": "sh.zamani384@gmail.com",
+		"url": "https://github.com/ShayanTheNerd/multi-function-timepiece/issues"
 	},
 	"devDependencies": {
 		"prettier": "^2.8.7",
@@ -31,8 +31,8 @@
 		"tailwindcss": "^3.3.1"
 	},
 	"scripts": {
+      "format": "npx prettier --write .",
 		"dev": "npx tailwindcss -i ./assets/css/tw-input.css -o ./assets/css/styles.css --watch",
-		"build": "npx tailwindcss -i ./assets/css/tw-input.css -o ./assets/css/styles.css --minify",
-		"format": "npx prettier --write ."
+		"build": "npx tailwindcss -i ./assets/css/tw-input.css -o ./assets/css/styles.css --minify"
 	}
 }
