@@ -120,5 +120,5 @@ More projects like this: https://github.com/ShayanTheNerd?tab=repositories <br /
 
 The code in this project is licensed under <a href="https://github.com/ShayanTheNerd/multi-function-timepiece/blob/main/LICENSE.md">MIT license</a>. You're free to use it; but a link to this page and mentioning the author's name is mandatory.
 
-<br /><br />
+<br />
 <a href="https://github.com/ShayanTheNerd/multi-function-timepiece#multi-function-timepiece">Back to top ⬆️</a>
