@@ -3,7 +3,7 @@
 Multi-Function Timepiece is a collection of 3 handy tools (analog clock, stopwatch, and countdown timer) all gathered in a magical box with cubic animations and effects!
 
 <figure>
-  <img src="https://github.com/ShayanTheNerd/multi-function-timepiece/blob/main/og-img.png" />
+  <img src="https://github.com/ShayanTheNerd/multi-function-timepiece/blob/main/og-img.webp" />
 </figure>
 
 ## Technologies used in this project
