@@ -8,7 +8,7 @@
 		"email": "sh.zamani384@gmail.com"
 	},
 	"keywords": [
-      "stopwatch",
+		"stopwatch",
 		"html css js",
 		"analog clock",
 		"countdown timer",
@@ -31,7 +31,7 @@
 		"tailwindcss": "^3.3.1"
 	},
 	"scripts": {
-      "format": "npx prettier --write .",
+		"format": "npx prettier --write .",
 		"dev": "npx tailwindcss -i ./assets/css/tw-input.css -o ./assets/css/styles.css --watch",
 		"build": "npx tailwindcss -i ./assets/css/tw-input.css -o ./assets/css/styles.css --minify"
 	}
