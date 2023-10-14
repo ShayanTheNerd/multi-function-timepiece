@@ -42,10 +42,10 @@ function updateAnalogClock(timeComponents, secondHand, minuteHand, hourHand) {
 
 function displayDateAndTime(timeComponents, timeContainer, dateContainer) {
 	/* prettier-ignore */
-	const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-	const weekdays = ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+	const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+	const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 	const { seconds, minutes, hours, dayNumber, date, monthNumber, year } = timeComponents;
-	const today = weekdays[dayNumber + 1];
+	const today = weekdays[dayNumber];
 	const month = months[monthNumber];
 
 	// Format time components
