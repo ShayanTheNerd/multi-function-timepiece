@@ -15,7 +15,6 @@ async function loadModuleByHash(hash = getURLHashValue()) {
 
 	const moduleName = upperCaseFirstLetter(hash);
 	const module = (await import(`./modules/initialize${moduleName}.mjs`)).default;
-
 	module();
 }
 
