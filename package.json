@@ -26,9 +26,9 @@
 		"url": "https://github.com/ShayanTheNerd/multi-function-timepiece/issues"
 	},
 	"devDependencies": {
-		"prettier": "^2.8.7",
-		"prettier-plugin-tailwindcss": "^0.2.6",
-		"tailwindcss": "^3.3.1"
+		"prettier": "^2.8.8",
+		"prettier-plugin-tailwindcss": "^0.2.8",
+		"tailwindcss": "^3.4.0"
 	},
 	"scripts": {
 		"format": "npx prettier --write .",
