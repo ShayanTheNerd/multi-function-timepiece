@@ -37,7 +37,7 @@
 	</head>
 
 	<body
-		class="relative flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-slate-100 to-slate-200 p-2.5 pb-28 pt-0 supports-[min-height:100dvh]:min-h-[100dvh] lg:items-center">
+		class="relative flex antialiased min-h-screen flex-col items-center justify-center bg-gradient-to-b from-slate-100 to-slate-200 p-2.5 pb-28 pt-0 supports-[min-height:100dvh]:min-h-[100dvh] lg:items-center">
 		<h1
 			class="mb-20 mt-5 max-w-xs text-center text-2xl font-black tracking-wide text-slate-700 [text-wrap:balance] sm:max-w-max lg:mb-28 lg:mt-0 lg:text-3xl">
 			Multi-function Timepiece
@@ -70,7 +70,7 @@
 						</div>
 
 						<!-- Current date and time -->
-						<time datetime="" id="time_element" class="space-y-1.5">
+						<time datetime="" id="time_element" class="space-y-1.5 tabular-nums">
 							<span id="currentTime" class="block text-3xl font-bold"></span>
 							<span id="currentDate" class="block text-lg font-semibold"></span>
 						</time>
@@ -89,7 +89,7 @@
 							</svg>
 						</figure>
 
-						<p class="block w-72 text-[40px] font-bold" id="stopwatchTimerContainer">00 : 00 : 00</p>
+						<p class="block w-72 text-[40px] font-bold tabular-nums" id="stopwatchTimerContainer">00 : 00 : 00</p>
 
 						<!-- Stopwatch contorls -->
 						<div class="-mt-7 flex w-72 items-center justify-around text-xl">
@@ -111,7 +111,7 @@
 							</svg>
 						</figure>
 
-						<p class="block w-40 text-[40px] font-bold" id="countdownTimerContainer">00 : 00</p>
+						<p class="block w-40 text-[40px] font-bold tabular-nums" id="countdownTimerContainer">00 : 00</p>
 
 						<!-- Countdown timer controls -->
 						<form id="countdownTimerForm" class="-mt-4 flex flex-col items-center justify-center space-y-4">
