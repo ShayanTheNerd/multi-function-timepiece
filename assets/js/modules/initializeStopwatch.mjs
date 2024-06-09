@@ -15,11 +15,10 @@ function stopwatchController() {
 	const controlBtnState = controlBtn.textContent.trim().toLowerCase();
 
 	if (controlBtnState === 'start') {
-		stopwatchInterval = setInterval(() => stopwatchOperator(timerContainer), 100);
+		stopwatchInterval = setInterval(stopwatchOperator, 100);
 		controlBtn.textContent = 'stop';
 		resetBtn.classList.remove('hidden');
 	} else {
-		// Stop the timer counter
 		clearInterval(stopwatchInterval);
 		controlBtn.textContent = 'start';
 	}

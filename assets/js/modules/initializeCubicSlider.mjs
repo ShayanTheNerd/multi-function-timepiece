@@ -9,7 +9,8 @@ const cubicSwiperSliderConfig = {
 		clickable: true,
 		type: 'bullets',
 		renderBullet(index, className) {
-			let [name, twColor] = ['', ''];
+			let name = '';
+			let twColor = '';
 
 			switch (index) {
 				case 0: {
@@ -42,5 +43,5 @@ const cubicSwiperSliderConfig = {
 };
 
 export default function initializeCubicSlider() {
-	new Swiper('.cubic-slider', cubicSwiperSliderConfig);
+	return new Swiper('.cubic-slider', cubicSwiperSliderConfig);
 }

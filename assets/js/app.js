@@ -8,7 +8,9 @@ initializeCubicSlider();
 initializeClockPanel();
 
 // Dynamically load modules based on the hash in the URL
-window.addEventListener('hashchange', () => loadModuleByHash(getURLHashValue()));
+window.addEventListener('hashchange', async () => {
+	await loadModuleByHash(getURLHashValue());
+});
 
 async function loadModuleByHash(hash = getURLHashValue()) {
 	if (!hash || hash === 'clock') return;
